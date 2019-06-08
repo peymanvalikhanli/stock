@@ -65,9 +65,9 @@ function hashchanged(){
     var end_page_name = hash.indexOf("?");
     var file ="";
     if(hash!="") {
-        file = "/stock_app/cyberDEV/pages/" + ( end_page_name != -1 ? hash.substring(0, end_page_name) : hash ) + ".html";
+        file = "cyberDEV/pages/" + ( end_page_name != -1 ? hash.substring(0, end_page_name) : hash ) + ".html";
     }else{
-        file = "/stock_app/cyberDEV/pages/" + "index.html";
+        file = "cyberDEV/pages/" + "index.html";
     }
 
     includeHTML(file,elemnt);
