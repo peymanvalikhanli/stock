@@ -1,0 +1,57 @@
+<html>
+
+<body>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+    <div id="tradingview_b0220"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+    <script type="text/javascript">
+        var widget =  new TradingView.widget(
+                {
+                    "width": 980,
+                    "height": 610,
+                    "symbol": "NASDAQ:AAPL",
+                    "interval": "D",
+                    "timezone": "Asia/Tehran",
+                    "theme": "Light",
+                    "style": "1",
+                    "locale": "fa_IR",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "allow_symbol_change": false,
+                    "container_id": "tradingview_b0220",
+                    "fullscreen": false,
+                    "locale": "fa-IR",//getParameterByName('lang') || "fa",
+                    "supported_resolutions": ["1D", "1W", "1M"],
+                    "time_frames": [
+                        {"text": "10y", "resolution": "6M"},
+                        {"text": "1y", "resolution": "W"},
+                        {"text": "6m", "resolution": "D"},
+                        {"text": "1m", "resolution": "D"},
+                        {"text": "7d", "resolution": "D"},
+                        {"text": "1d", "resolution": "D"},
+                    ]
+                    , "favorites": {
+                        "intervals": ["D"]
+//						chartTypes: ["Area", "Line"]
+                        }
+
+                    , "enabled_features": ["saveload_requires_authentication","use_localstorage_for_settings", "show_dialog_on_snapshot_ready", "narrow_chart_enabled", "trading_options", "side_toolbar_in_fullscreen_mode", "charts_auto_save"]
+                    ,"withdateranges": true
+                    ,"show_popup_button": true
+                    ,"popup_width": "1000"
+                    ,"popup_height": "650"
+                    ,"client_id": 'nahayatnegar.com'
+//                    ,"logo": {
+//                        image: "https://www.nahayatnegar.com/images/nahayat_negar_chart.png"
+//                    }
+
+                });
+
+    </script>
+</div>
+<!-- TradingView Widget END -->
+
+</body>
+</html>
+

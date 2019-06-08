@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html ng-app="ershanApp" lang="fa" dir="rtl" ng-cloak prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="theme-color" content="#0091af" />
+    <title>ابزار تحلیل تکنیکال | ارشن</title>
+    <meta name="description" content="ابزارهای رسم هوشمند با بیش از 50 اندیکاتور، ذخیره و بازیابی ساده تحلیل‌ها با مشاهده سابقه و به اشتراک‌گذاری تحلیل‌ در شبکه اجتماعی! ">
+    <meta itemprop="name" content="ابزار تحلیل تکنیکال">
+    <meta itemprop="image" content="http://www.nahayatnegar.com/images/logo.png">
+    <meta itemprop="url" content="http://www.nahayatnegar.com/tv">
+    <meta itemprop="description" content="ابزارهای رسم هوشمند با بیش از 50 اندیکاتور، ذخیره و بازیابی ساده تحلیل‌ها با مشاهده سابقه و به اشتراک‌گذاری تحلیل‌ در شبکه اجتماعی! ">
+    <meta name="twitter:title" content="ابزار تحلیل تکنیکال">
+    <meta name="twitter:description" content="ابزارهای رسم هوشمند با بیش از 50 اندیکاتور، ذخیره و بازیابی ساده تحلیل‌ها با مشاهده سابقه و به اشتراک‌گذاری تحلیل‌ در شبکه اجتماعی! ">
+    <meta name="twitter:image:src" content="http://www.nahayatnegar.com/images/logo.png">
+    <meta property="og:title" content="ابزار تحلیل تکنیکال">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="http://www.nahayatnegar.com/tv">
+    <meta property="og:image" content="http://www.nahayatnegar.com/images/logo.png">
+    <meta property="og:description" content="ابزارهای رسم هوشمند با بیش از 50 اندیکاتور، ذخیره و بازیابی ساده تحلیل‌ها با مشاهده سابقه و به اشتراک‌گذاری تحلیل‌ در شبکه اجتماعی! ">
+    <meta property="og:site_name" content="ابزار تحلیل تکنیکال">
+    <meta property="fb:admins" content="100010411872464">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/font/font-icon/css/ershan-font.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="http://www.nahayatnegar.com/images/logo.png" rel="image_src">
+    <link href="http://www.nahayatnegar.com/tv" rel="canonical">
+    <link href="/assets/app.1556109311.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/assets/base_css.1556109311.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/assets/login_assets.1556109311.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+    <script type="text/javascript" src="/assets/base_js.1556109311.js"></script>
+    <script type="text/javascript" src="/assets/base_js_min.1556109311.js"></script>
+    <script type="text/javascript" src="/assets/tv_js.1556109311.js"></script>
+    <script>
+        var _LOCALE = 'fa_IR';
+        var _isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        if ( _isMobile && window.location.pathname === "/usr/panel" )
+            window.location = "/pst/feed";
+
+    </script>
+</head>
+<body ng-controller="mainCtrl" class="ershanTS" ng-class="{'is-small-screen': isSmallScreen, 'disable-scroll': disableScroll}">
+<!-- <link rel="stylesheet" type="text/css" href="/application/css/search.css" /> -->
+<div class="header-wrapper
+			fixed"
+     ng-class="{fixed: isSmallScreen}">
+    <div class="header-top-colors" ng-show="topColors"></div>
+    <!-- header search -->
+    <div id="header_search" class="header-search">
+        <form class="header-search-form">
+            <script type="text/ng-template" id="/indexSearch.tpl">
+                <ul class="tabs-content ngTemplateTabContent">
+                    <li ng-class="active">
+                        <ul class="list-group user-search scrollable-menu">
+                            <li mentio-menu-item="inst" ng-repeat="inst in items" class="list-group-item">
+                                <img ng-src="{{inst.L}}" class="user-photo">
+                                <span class="text-primary" ng-bind-html="inst.T | mentioHighlight:typedTerm:'menu-highlighted'"></span>
+                                <em ng-show="inst.EI != ''" ng-bind-html="'(' + inst.EI + ')' | mentioHighlight:typedTerm:'menu-highlighted'"></em>
+                                <em style="float: left;">{{inst.titleType}}</em>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </script>
+            <script type="text/ng-template" id="/instrument-mentions.tpl">
+                <dl class="tabs ngTemplateTab instrumentTab" ng-init="type=-1;">
+                    <dd ng-class="{'active': type == -1}">
+                        <a ng-click="type=-1;" class="searchTabsItem">همه</a>
+                    </dd>
+                    <dd ng-class="{'active': type == 2}">
+                        <a ng-click="type=2;" class="searchTabsItem">سهام</a>
+                    </dd>
+                    <dd ng-class="{'active': type == 3}">
+                        <a ng-click="type=3;" class="searchTabsItem">صنعت</a>
+                    </dd>
+                    <dd ng-class="{'active': type == 6}">
+                        <a ng-click="type=6;" class="searchTabsItem">بازار</a>
+                    </dd>
+                </dl>
+                <ul class="tabs-content ngTemplateTabContent">
+                    <li ng-class="active">
+                        <ul class="list-group user-search scrollable-menu">
+                            <li mentio-menu-item="inst" ng-repeat="inst in items" class="list-group-item" ng-if="inst.TI == type || type == -1">
+                                <img ng-src="{{inst.L}}" class="user-photo">
+                                <span class="text-primary" ng-bind-html="inst.T | mentioHighlight:typedTerm:'menu-highlighted'"></span>
+                                <em ng-show="inst.EI != ''" ng-bind-html="'(' + inst.EI + ')' | mentioHighlight:typedTerm:'menu-highlighted'"></em>
+                                <em style="float: left;">{{inst.titleType}}</em>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </script>
+            <script type="text/ng-template" id="/headerSerch.tpl">
+                <div class="hide-for-medium-down large-5 columns search-result-col">
+                    <h2>سهام</h2>
+                    <div class="search-result-row"
+                         mentio-menu-item="inst" ng-repeat="inst in items | filter: { TI: 2 }"
+                         ng-href="">
+                        <img ng-src="{{inst.L}}" alt="" class="icon" />
+                        <div class="result-txt">
+                            <span class="text-primary" ng-bind-html="inst.T | mentioHighlight:typedTerm:'menu-highlighted'"></span>
+                            <em ng-show="inst.EI != ''" ng-bind-html="'(' + inst.EI + ')' | mentioHighlight:typedTerm:'menu-highlighted'"></em>
+                            <div class="text-muted">{{inst.titleType}}</div>
+                        </div>
+                        <div class="clearfix amer">
+                            <a href="/tv/{{inst.I}}" target="_blank" class="left button chart">
+                                <i class="fa fa-technical-tools chart-shortcut"></i>
+                                <span class="chart-shortcut"> نمودار </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-for-medium-down large-5 columns search-result-col">
+                    <h2>صنعت</h2>
+                    <div class="search-result-row"
+                         mentio-menu-item="inst" ng-repeat="inst in items | filter: { TI: 3 }"
+                         ng-href="">
+                        <img ng-src="{{inst.L}}" alt="" class="icon" />
+                        <div class="result-txt">
+                            <span class="text-primary" ng-bind-html="inst.T | mentioHighlight:typedTerm:'menu-highlighted'"></span>
+                            <em ng-show="inst.EI != ''" ng-bind-html="'(' + inst.EI + ')' | mentioHighlight:typedTerm:'menu-highlighted'"></em>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-for-medium-down large-5 columns search-result-col">
+                    <h2>بازار</h2>
+                    <div class="search-result-row"
+                         mentio-menu-item="inst" ng-repeat="inst in items | filter: { TI: 6 }"
+                         ng-href="">
+                        <img ng-src="{{inst.L}}" alt="" class="icon" />
+                        <div class="result-txt">
+                            <span class="text-primary" ng-bind-html="inst.T | mentioHighlight:typedTerm:'menu-highlighted'"></span>
+                            <em ng-show="inst.EI != ''" ng-bind-html="'(' + inst.EI + ')' | mentioHighlight:typedTerm:'menu-highlighted'"></em>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-for-medium-down large-5 columns search-result-col">
+                    <h2>کاربران</h2>
+                    <div class="search-result-row"
+                         mentio-menu-item="inst" ng-repeat="inst in items | filter: { TI: 1 }"
+                         ng-href="">
+                                <span class="avatar" ng-class="{'legal' : inst.LE}">
+                                    <img ng-src="{{inst.L}}" alt="" class="icon"/>
+                                </span>
+                        <div class="result-txt">
+                            <i class="fa fa-company" ng-if="inst.LE"></i>
+                            <span class="text-primary" ng-bind-html="inst.T | mentioHighlight:typedTerm:'menu-highlighted'"></span>
+                            <em ng-show="inst.EI != ''" ng-bind-html="'(' + inst.EI + ')' | mentioHighlight:typedTerm:'menu-highlighted'"></em>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide-for-medium-down large-4 columns search-result-col">
+                    <h2>سایر موضوعات</h2>
+                    <div class="search-result-row"
+                         mentio-menu-item="inst" ng-repeat="inst in items | filter: { TI: 4 }"
+                         ng-href="">
+                        <img ng-src="{{inst.L}}" alt="" class="icon"/>
+                        <div class="result-txt">
+                            <img src="/images/lock-icon.png" ng-show="!inst.P && !inst.PA" title="اتاق اختصاصی">
+                            <img src="/images/opened-lock-icon.png" ng-show="!inst.P && inst.PA" title="شما اجازه ارسال در این اتاق اختصاصی را دارید">
+                            <span class="text-primary" ng-bind-html="inst.T | mentioHighlight:typedTerm:'menu-highlighted'"></span>
+                            <em ng-show="inst.EI != ''" ng-bind-html="'(' + inst.EI + ')' | mentioHighlight:typedTerm:'menu-highlighted'"></em>
+                        </div>
+                    </div>
+                    <div class="search-result-row"
+                         mentio-menu-item="inst" ng-repeat="inst in items | filter: { TI: 5 }"
+                         ng-href="">
+                        <img ng-src="{{inst.L}}" alt="" class="icon"/>
+                        <div class="result-txt">
+                            <span class="text-primary" ng-bind-html="inst.T | mentioHighlight:typedTerm:'menu-highlighted'"></span>
+                            <em ng-show="inst.EI != ''" ng-bind-html="'(' + inst.EI + ')' | mentioHighlight:typedTerm:'menu-highlighted'"></em>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-for-medium-down columns search-result-col">
+                    <div class="search-result-row"
+                         mentio-menu-item="inst" ng-repeat="inst in items"
+                         ng-href="">
+                        <img ng-src="{{inst.L}}" alt="" class="icon"/>
+                        <div class="result-txt">
+                            <span class="text-primary" ng-bind-html="inst.T | mentioHighlight:typedTerm:'menu-highlighted'"></span>
+                            <em ng-show="inst.EI != ''" ng-bind-html="'(' + inst.EI + ')' | mentioHighlight:typedTerm:'menu-highlighted'"></em>
+                            <em style="float: left;">{{inst.titleType}}</em>
+                        </div>
+                    </div>
+                </div>
+            </script>
+            <script type="text/ng-template" id="/people-mentions.tpl">
+                <ul class="list-group user-search scrollable-menu">
+                    <li mentio-menu-item="person" ng-repeat="person in items" class="list-group-item">
+                        <img ng-src="{{person.L}}" class="user-photo">
+                        <span class="text-primary" ng-bind-html="person.T | mentioHighlight:typedTerm:'menu-highlighted'"></span>
+                        <em class="text-muted" ng-show="person.EI != ''" ng-bind-html="'(' + person.EI + ')' | mentioHighlight:typedTerm:'menu-highlighted'"></em>
+                    </li>
+                </ul>
+            </script>
+            <script type="text/ng-template" id="/discussion-mentions.tpl">
+                <ul class="list-group user-search scrollable-menu">
+                    <li mentio-menu-item="discussion" ng-repeat="discussion in items" class="list-group-item">
+                        <img ng-src="{{discussion.L}}" class="user-photo">
+                        <span class="text-primary" ng-bind-html="discussion.T | mentioHighlight:typedTerm:'menu-highlighted'"></span>
+                        <em class="text-muted" ng-show="discussion.EI != ''" ng-bind-html="'(' + discussion.EI + ')' | mentioHighlight:typedTerm:'menu-highlighted'"></em>
+                    </li>
+                </ul>
+            </script>
+            <input
+                    type="text"
+                    placeholder="جسـتـجو در ارشن ..."
+                    class="header-search-input amer"
+                    mentio
+                    mentio-typed-text="typedTermHeaderSearch"
+                    mentio-require-leading-space="false"
+                    mentio-select-not-found="true"
+                    id="headerSearch"
+                    ng-model="theTextHeaderSerach"
+                    ng-trim="false"
+                    ng-keyup="emptyBoxSearch($event)"
+                    size="100" />
+            <mentio-menu
+                    mentio-for="'headerSearch'"
+                    mentio-trigger-char="'*'"
+                    mentio-items="instruments"
+                    mentio-template-url="/headerSerch.tpl"
+                    mentio-search="searchHeader(term)"
+                    mentio-select="getSearchHeaderTextRaw(item)"
+                    id="headerSearchMenu">
+            </mentio-menu>
+            <i class="fa fa-search-msg header-search-icon"></i>
+        </form>
+        <div class="row header-search-content" id="header_search_result"></div>
+        <span class="header-search-close"></span>
+    </div>
+    <div class="search-overlay"></div>
+    <!-- header search -->
+    <div class="row header-top" data-topbar>
+        <div class="text-right small-8 columns">
+            <a href="/ershan" class="header-logo-link">
+                <div class="right logo">
+                    <i class="fa fa-ershan-icon"></i>
+                </div>
+                <div class="right">
+                    <div class="logo-txt">
+                        <div class="logo-ershan-menu ershanTS">
+                            <i class="fa fa-ershan-text"></i>
+                        </div>
+                    </div>
+                    <div class="logo-subline">رسانه اجتماعی-تحلیلی بازار سرمایه</div>
+                </div>
+            </a>
+        </div>
+        <div class="text-right show-for-large-up small-12 columns header-search-holder">
+            <!-- header search used to reside here! -->
+
+        </div>
+        <div class="small-4 end columns text-right user-menu">
+            <!--
+<a href="/usr/login">LOGIN</a><a href="/usr/register">REGISTER</a>
+-->
+            <div class="text-left entrance-bar menu-holder amer"
+                 onclick="$('#loginModal').foundation('reveal', 'open', { url: '/usr/login/request' } );">
+                <i class="fa fa-lock"></i>
+                ورود/عضویت
+            </div>
+        </div>
+    </div>
+    <div class="row header-bottom">
+        <!-- block for medium-down -->
+        <div class="small-3 medium-2 show-for-medium-down columns off-canvas-toggle-holder">
+            <a class="right-off-canvas-toggle menu-icon" href="#"
+               ng-click="rightOffCanvas=!rightOffCanvas;leftOffCanvas=false;"
+               ng-class="{'active': rightOffCanvas}">
+                <span></span>
+            </a>
+            <div class="right-off-canvas show-for-medium-down" id="rightOffCanvas"
+                 ng-class="{'active': rightOffCanvas}">
+                <input offcanvas-watcher ow-dir="right"
+                       id="rightOffCanvasInput" type="hidden"
+                       ng-init="rightOffCanvas=false;" ng-model="rightOffCanvas" />
+                <ul class="off-canvas-list">
+                    <li>
+                        <a href="/pst/feed">
+                            رصدخانه			        	</a>
+                    </li>
+                    <li>
+                        <a href="/usr/search">
+                            کاربران			        	</a>
+                    </li>
+                    <li>
+                        <a href="/analysis/latest">
+                            تحلیل‌ بازار			        	</a>
+                    </li>
+                    <li>
+                        <a href="/blog/latest">
+                            بلاگ			        	</a>
+                    </li>
+                    <li>
+                        <a href="/discussion">
+                            بحث و گفتگو						</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- block for medium-down -->
+        <div class="er-msg-rel">
+        </div>
+        <div class="small-4 columns logo-holder">
+            <div class="right logo-txt hide-for-medium-down">
+                <div class="logo-ershan-menu">
+                    <a href="/ershan">
+                        <i class="fa fa-ershan-text-logo"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="show-for-large-up small-14 small-offset-5 columns header-menu">
+            <div class="row nav-pane-container">
+                <div class="medium-10 medium-offset-2 show-for-medium-up large-2 large-offset-0 text-center columns nav-link feed"
+                     title="">
+                    <a href="/">
+                        <span>خانه</span>
+                    </a>
+                </div>
+                <div class="show-for-medium-up nav-link-divider"></div>
+                <div class="medium-10 medium-offset-2 show-for-medium-up large-3 large-offset-0 text-center columns nav-link feed
+			"
+                     title="">
+                    <a href="javascript:;"
+                       onclick="$('#loginModal').foundation('reveal', 'open', { url: '/usr/login/request' } );">
+                        <span>رصدخانه</span>
+                    </a>
+                    <span class="banned">فقط کاربران</span>
+                </div>
+                <div class="show-for-medium-up nav-link-divider"></div>
+                <div class="medium-10 medium-offset-2 show-for-medium-up large-3 large-offset-0 text-center columns nav-link discussion
+			"
+                     title="">
+                    <a href="/discussion">
+                        <span>بحث و گفتگو</span>
+                    </a>
+                </div>
+                <div class="show-for-medium-up nav-link-divider"></div>
+                <div class="medium-10 medium-offset-2 show-for-medium-up large-2 large-offset-0 text-center columns nav-link analysis
+			"
+                     title="">
+                    <a href="/analysis/latest">
+                        <span>تحـلیـل</span>
+                    </a>
+                </div>
+                <div class="show-for-medium-up nav-link-divider"></div>
+                <!--	<div class="medium-10 medium-offset-2 show-for-medium-up large-2 large-offset-0 text-center columns nav-link news-->
+                <!--			-->
+                <!--"-->
+                <!--		title="">-->
+                <!--		<a href="/news/latest">-->
+                <!--			<span>-->
+                <!--اخـبار</span>-->
+                <!--		</a>-->
+                <!--	</div>-->
+                <!--	<div class="show-for-medium-up nav-link-divider"></div>-->
+                <div class="medium-10 medium-offset-2 show-for-medium-up large-2 large-offset-0 text-center columns nav-link blog
+			"
+                     title="">
+                    <a href="/blog/latest">
+                        <span>بـلاگ</span>
+                    </a>
+                </div>
+                <div class="show-for-medium-up nav-link-divider"></div>
+                <div class="medium-10 medium-offset-2 show-for-medium-up large-2 large-offset-0 text-center columns nav-link tools has-dropdown
+			current"
+                     title="" data-dropdown="nav-link-tools-dd">
+                    <div class="nav-link-a">
+                        <span>ابــزار</span>
+                        <i class="fa fa-arrow-left"></i>
+                    </div>
+                </div>
+                <div class="tiny f-dropdown collapse row holder"
+                     id='nav-link-tools-dd' data-dropdown-content>
+                    <div class="columns items-holder">
+                        <div class="collapse row">
+                            <ul class="columns">
+                                <li
+                                        class="collapse row ">
+                                    <div class="columns">
+                                        <a href="/tv">ابزار تحلیل تکنیکال</a>
+                                    </div>
+                                </li>
+                                <li
+                                        class="collapse row ">
+                                    <div class="columns">
+                                        <a href="/watchlist">دیده‌بان</a>
+                                    </div>
+                                </li>
+                                <li
+                                        class="collapse row ">
+                                    <div class="columns">
+                                        <a href="/marketmap">نقشه بازار</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="show-for-medium-up nav-link-divider"></div>
+                <!--
+<div class="medium-10 medium-offset-2 show-for-medium-up large-4 large-offset-0 text-center columns nav-link virtual-trading"><a href="javascript:;"><span>معاملات مجازی</span></a>
+</div><div class="show-for-medium-up nav-link-divider"></div>-->
+                <div class="medium-10 medium-offset-2 show-for-medium-up large-3 large-offset-0 text-center columns nav-link people
+			"
+                     title="">
+                    <a href="javascript:;"
+                       onclick="$('#loginModal').foundation('reveal', 'open', { url: '/usr/login/request' } );">
+                        <span>کاربـران</span>
+                    </a>
+                    <span class="banned">فقط کاربران</span>
+                </div>
+                <div class="tiny f-dropdown collapse row holder"
+                     id='nav-link-more-dd' data-dropdown-content>
+                    <div class="columns items-holder">
+                        <div class="collapse row">
+                            <ul class="columns">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center nav-link online-trading">
+            <a href="/online" id="online-btn-change">
+                <i class="fa fa-naharokh-icon"></i>
+                <i class="fa fa-naharokh-text"></i>
+            </a>
+        </div>
+        <div class="large-5 columns user-holder"></div>
+    </div>
+</div>
+<script>
+    (function() {
+        var headerSearch = $( '#header_search' ),
+                input = $( 'input.header-search-input' ),
+                ctrlClose = $( 'span.header-search-close' ),
+                isOpenByShortcut = isOpen = isAnimating = false,
+        // show/hide search area
+                toggleSearch = function(evt) {
+
+                    // return if opened by shortcut and the input gets focused
+                    if( evt.type.toLowerCase() === 'focus' && isOpenByShortcut ) return false;
+
+                    // return if open and the input gets focused
+                    if( evt.type.toLowerCase() === 'focus' && isOpen ) return false;
+
+                    if( isOpen ) {
+                        headerSearch.removeClass( 'open' );
+
+                        /**
+                         * if search is opened by header-bottom search shortcut,
+                         * then hide the text input when closing
+                         */
+                        if (isOpenByShortcut) {
+// 						headerSearch.css('display', 'none');
+                            isOpenByShortcut = !isOpenByShortcut;
+// 						var whole_search = headerSearch.detach();
+// 						$('.header-search-holder').append(whole_search);
+                        }
+
+                        // trick to hide input text once the search overlay closes
+                        // todo: hardcoded times, should be done after transition ends
+                        if( input.val() !== '' ) {
+                            setTimeout(function() {
+                                headerSearch.addClass( 'hideInput' );
+                                setTimeout(function() {
+                                    headerSearch.removeClass( 'hideInput' );
+                                    input.val('');
+                                }, 300 );
+                            }, 500);
+                        }
+
+                        $('.icon-wrapper.feedback, #int_hint_btn, body > biz-notif').css("cssText", "display: inherit !important;");
+                        $('body').css('overflow', 'auto');
+                        input.blur();
+                    }
+                    else {
+                        if ( evt.type == 'click'
+                                && typeof evt.target != undefined && evt.target.className.indexOf('fa-search-msg') > -1 ) {
+                            var mentio_menu = $('#headerSearchMenu').detach().css('display', 'block');
+                            $('#header_search_result').append(mentio_menu);
+// 						var whole_search = headerSearch.detach();
+// 						$('body').append(whole_search);
+                            isOpenByShortcut = !isOpenByShortcut;
+                            setTimeout(function() {
+                                input.trigger('focus');
+                            }, 100 );
+                        } else {
+                            var mentio_menu = $('#headerSearchMenu').detach().css('display', 'block');
+                            $('#header_search_result').append(mentio_menu);
+                        }
+                        headerSearch.addClass( 'open' );
+
+                        $('.icon-wrapper.feedback, #int_hint_btn, body > biz-notif').css("cssText", "display: none !important;");
+                        $('body').css('overflow', 'hidden');
+                    }
+                    isOpen = !isOpen;
+                };
+
+        // events
+        input.on( 'focus', toggleSearch );
+        ctrlClose.on( 'click', function() {
+            var e = jQuery.Event("keydown");
+            e.which = 27;
+            input.trigger(e);
+        });
+        // esc key closes search overlay
+        // keyboard navigation events
+        $(document).on( 'keydown', function( ev ) {
+            var keyCode = ev.keyCode || ev.which;
+            if( keyCode === 27 && isOpen ) {
+                toggleSearch(ev);
+            }
+        } );
+
+        $('.search-shortcut > .fa-search-msg').on( 'click', function( ev ) {
+            toggleSearch(ev);
+        } );
+
+
+        /***** for demo purposes only: don't allow to submit the form *****/
+        headerSearch.find( 'button[type="submit"]' ).on( 'click', function(ev) { ev.preventDefault(); } );
+    })();
+</script>
+<div class="container"
+     ng-swipe-left="swipePanes('left')"
+     ng-swipe-right="swipePanes('right')">
+    <style>
+        html, body {
+            height: 100% !important;
+            min-height: 100% !important;
+        }
+        body .row {
+            max-width: 100%;
+        }
+        body .container {
+            max-width: 100% !important;
+        }
+    </style>
+    <script type="text/javascript">
+        // 			localStorage.clear();
+
+        var is_authenticated = false;
+        var instId = 'IRO1IKCO0001';
+        var adjustmentType = (localStorage['adjustmentType'] && typeof localStorage['adjustmentType'] != 'undefined')
+                ? localStorage.getItem('adjustmentType') : 3;
+        var chartSymbol = (typeof localStorage['chartSymbol'] != 'undefined') ? localStorage.getItem('chartSymbol') : 'IRO1IKCO00013';
+
+        chartSymbol = instId != 0 ? instId + '' + parseInt(adjustmentType) : chartSymbol;
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                    results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+        TradingView.onready(function()
+        {
+            var widget = new TradingView.widget({
+                fullscreen: false,
+                width:'100%',
+                height:'100%',
+//  				full_name: 'شاخص کل6',
+                symbol: chartSymbol,
+                interval: 'D',
+                timezone: 'Asia/Tehran',
+                allow_symbol_change: true,
+                container_id: "tv_chart_container",
+                datafeed: new Datafeeds.UDFCompatibleDatafeed('/tv/chart'),
+                library_path: "/tv16/",
+                locale: "fa_IR",//getParameterByName('lang') || "fa",
+                supported_resolutions: ["1D", "1W", "1M"],
+// 					numeric_formatting: { decimal_sign: "," },
+
+//			        drawings_access: { type: 'black', tools: [ { name: "Regression Trend" } ] },
+                disabled_features: ["header_settings", "move_logo_to_main_pane", "google_analytics","14851"],// , "saveload_storage_customization", "save_chart_properties_to_local_storage"
+                enabled_features: ["saveload_requires_authentication","use_localstorage_for_settings", "show_dialog_on_snapshot_ready", "narrow_chart_enabled", "trading_options", "side_toolbar_in_fullscreen_mode", "charts_auto_save"],
+//                  "saveload_requires_authentication", 
+                overrides: {
+// 						"mainSeriesProperties.style": 9,
+// 						"mainSeriesProperties.candleStyle.upColor": "#6ba583",
+// 						"mainSeriesProperties.candleStyle.downColor": "#d75442",
+// 						"mainSeriesProperties.candleStyle.drawWick": true,
+// 						"mainSeriesProperties.candleStyle.drawBorder": true,
+// 						"mainSeriesProperties.candleStyle.borderColor": "#378658",
+// 						"mainSeriesProperties.candleStyle.borderUpColor": "#225437",
+// 						"mainSeriesProperties.candleStyle.borderDownColor": "#5b1a13",
+// 						"mainSeriesProperties.candleStyle.wickColor": "#737375",
+// 						"mainSeriesProperties.candleStyle.barColorsOnPrevClose": false
+                },
+                studies_overrides: {
+// 						"volume.volume.color.0": "#00FFFF",
+// 						"volume.volume.color.1": "#0000FF",
+// 						"volume.volume.transparency": 70,
+// 						"volume.volume ma.color": "#FF0000",
+// 						"volume.volume ma.transparency": 30,
+// 						"volume.volume ma.linewidth": 5,
+// 						"volume.show ma": true,
+// 						"bollinger bands.median.color": "#33FF88",
+// 						"bollinger bands.upper.linewidth": 7
+                },
+                is_authenticated: is_authenticated,
+                debug: false,
+                time_frames: [
+                    { text: "10y", resolution: "6M" },
+                    { text: "1y", resolution: "W" },
+                    { text: "6m", resolution: "D" },
+                    { text: "1m", resolution: "D" },
+                    { text: "7d", resolution: "D" },
+                    { text: "1d", resolution: "D" },
+                ],
+                charts_storage_url: '/tv/chart',//chartsStorageUrl
+                snapshot_url: '/tv/chart/snapshot',//snapshotUrl
+                client_id: 'nahayatnegar.com',
+                user_id: '0',
+                favorites: {
+                    intervals: ["M" , "W"],
+//						chartTypes: ["Area", "Line"]
+                },
+                logo: {
+                    image: "/images/nahayat_negar_chart.png"
+                }//,
+// 					saved_data: savedChart
+            });
+
+            var savedWidgetContent = null;
+            var sending = false;
+            var autoSaves = [];
+            var autoSaveName = '';
+
+            widget.onChartReady(function() {
+                var iframe = $('#tv_chart_container iframe').contents();
+
+                widget.symbolInterval(function(s) {
+
+                    setTimeout(function(){ $('#adjustmentType', iframe).val(adjustmentType); }, 0);
+
+                    if (!is_authenticated)
+                        return;
+
+                    if(sending)
+                        return;
+
+                    sending = true;
+                    var json = { symbol : s.symbol, resolution : s.interval };
+                    $.ajax({
+                        url: "/tv/chart/autoChart",
+                        type: 'post',
+                        dataType: 'json',
+                        data: json,
+                        async: false,
+                        success: function(result){
+                            sending = false;
+                            if(result.data && result.data.content != null){
+                                widget.load(result.data.content);
+                                autoSaves.push(s.symbol);
+                            }
+                        }
+                    });
+                });
+
+                widget.onMarkClick(function(markId) {
+                    var str = markId.split('_');
+                    if(str[0] == 'meeting' || str[0] == 'buy' || str[0] == 'sell')
+                        return;
+                    var link = '/'+str[0]+'/'+str[1];
+                    window.open(link , '_blank') ;
+                });
+
+                widget.onSymbolChange(function(s) {
+
+                    if(s.type == 'index')
+                        $('#adjustmentType', iframe).closest('div').hide();
+                    else
+                        $('#adjustmentType', iframe).closest('div').show();
+
+                    if(autoSaves.indexOf(s.symbol) == -1) {
+
+                        if (!is_authenticated)
+                            return;
+
+                        if(sending)
+                            return;
+
+                        sending = true;
+                        var json = { symbol : s.symbol, resolution : s.interval };
+                        $.ajax({
+                            url: "/tv/chart/autoChart",
+                            type: 'post',
+                            dataType: 'json',
+                            data: json,
+                            async: false,
+                            success: function(result){
+                                sending = false;
+                                if(result.data && result.data.content != null){
+                                    widget.load(result.data.content);
+                                    autoSaves.push(s.symbol);
+                                }
+                            }
+                        });
+                    }
+                });
+
+                widget.onAutoSaveNeeded(function() {
+
+                    if (!is_authenticated)
+                        return;
+
+                    if(sending)
+                        return;
+
+                    sending = true;
+                    widget.save(function(data) {
+//     		                $('.loading' , iframe).html('در حال ارسال اطلاعات , لطفا منتظر بمانید ...');
+                        var json = { content : data[0] };
+
+                        $.ajax({
+                            url: "/tv/chart/autoChart",
+                            type: 'post',
+                            dataType: 'json',
+                            data: json,
+//     				            async: false,
+                            success: function(result){
+                                sending = false;
+//     								console.log('success');
+                            }
+                        });
+                    });
+                    sending = false;
+
+                });
+
+                if(!is_authenticated)
+                {
+                    $('.button.screenshot, .button.load, .button.save' , iframe).on('click', function(e){
+                        $('#loginModal').foundation('reveal', 'open', { url: '/usr/login/request' } );
+                        e.stopPropagation();
+                        return;
+                    });
+                }
+
+                widget.createButton()
+                        .addClass('publish-chart')
+                    //			.attr('title', 'publish-chart')
+                        .on('click', function (e) {
+
+                            if(!is_authenticated){
+                                $('#loginModal').foundation('reveal', 'open', { url: '/usr/login/request' } );
+                                return;
+                            }
+
+                            widget.symbolInterval(function(s) {
+                                symbol = Math.floor(s.symbol / 10);
+                            });
+
+                            widget.save(function(data) {
+                                savedWidgetContent = data;
+                                chart = data[0];
+                                image = data[1];
+
+// 								var iframe = $('#tv_chart_container iframe').contents(); // or some other selector to get the iframe
+//              				var modal = $('#modal').html();
+                                $('body.chart-page', iframe)
+                                        .append('
+                                        <div class="_tv-dialog _tv-dialog-nonmodal ui-draggable chart-post-form" style="z-index: 110; width: 600px; left: 50%; top: 50px; margin-left:-300px">'
+                                +'
+                                <div class="_tv-dialog-title">انتشار نمودار
+                                <a class="_tv-dialog-title-close"></a>
+                                </div>'
+                                +'
+                                <div class="_tv-dialog-error"></div>'
+                                +'
+                                <div class="_tv-dialog-message"></div>'
+                                +'
+                                <div class="_tv-dialog-content">'
+                                +'
+                                <div class="main">'
+                                +'
+                                <form>'
+                                    //		+'
+                                <div>' + image.charts['0'].meta.symbol + '</div>'
+                                +'
+                                <div class="publish-text">'
+                                +'
+                                <input type="text" name="title" style="margin-bottom:3px;" class="postTitle" placeholder="عنوان تحلیل را وارد نمایید" maxlength="64" style="margin:0;direction: rtl;">'
+                                +'
+                                </div>'
+                                +'
+                                <div class="publish-text">'
+                                +'
+                                <textarea name="postMessage" class="postMessage" placeholder="متن تحلیل را وارد نمایید" maxlength="1024" style="width: 100%;line-height: 20px;height: 150px;margin-bottom: 4px;direction: rtl;resize: none;overflow:overlay;"></textarea>'
+                                +'
+                                <div class="postMessage-counter align">
+                                <span class="counter-postMessage">0</span>/ 1024
+                                </div>'
+                                + '
+                                <input type="hidden" name="tags" class="postTags" value="2:' + symbol + '">'
+                                +'
+                                </div>'
+                                +'
+                                <div class="publish-direction-buttons clearfix" style="margin-top:-3px;">
+                                <div class="col-short apply-common-tooltip" title="نزولی">
+                                <a class="_tv-button short" data-val="2">
+                                <img src="/images/sentiment/bearish-old.png" style="margin-top:4px;">
+                                </a>
+                                </div>
+                                <div class="col-long apply-common-tooltip" title="صعودی">
+                                <a class="_tv-button long" data-val="1">
+                                <img src="/images/sentiment/bullish-old.png" style="margin-top:3px;">
+                                </a>
+                                </div>
+                                <div class="col-neutral apply-common-tooltip" title="بدون تغییر">
+                                <a class="_tv-button neutral" data-val="0">
+                                <img src="/images/sentiment/sideways.png" style="margin-top:-3px;">
+                                </a>
+                                </div>
+                                </div>'
+                                +'
+                                <div class="chart-post-pic" style="margin:3px 0;border: 1px solid #c9cbcd;">'
+                                +'
+                                <img src="'+image.charts['0'].panes['0'].content+'" style="width:100%; height:120px;"/>'
+                                +'
+                                </div>'
+                                    //			+'
+                                <div id="showImage"></div>'
+                                +'
+                                <div class="_tv-dialog-left" style="height: 20px;">'
+                                +'
+                                <input type="hidden" class="postDirection" name="direction" value="">'
+                                +'
+                                <a class="_tv-button wide ok chart-post-publish" style="margin-right: 5px;">ارسال</a>'
+                                +'
+                                <a class="_tv-button wide cancel chart-post-cancel">انصراف</a>'
+                                +'
+                                <span class="loading" style="float:right;padding:5px 0"></span>'
+                                +'
+                                </div>'
+                                +'
+                                </form>'
+                                +'
+                                </div>'
+                                +'
+                                </div>'
+                                +'
+                                </div>');
+// 								$('
+                                <div class="_tv-dialog _tv-dialog-nonmodal  ui-draggable" style="z-index: 110; width: 400px; left: 483px; top: 234.5px;">
+                                <div class="_tv-dialog-title">Publish Chart
+                                <a class="_tv-dialog-title-close"></a>
+                                </div>
+                                <div class="_tv-dialog-error"></div>
+                                <div class="_tv-dialog-message"></div>
+                                <div class="_tv-dialog-content">
+                                <div class="main">
+                                <form>
+                                <p>Chart layout name:</p>
+                                <p class="_tv-dialogs-name">
+                                <input type="text" name="name" maxlength="64" class="">
+                                </p>
+                                <p class="_tv-dialog-right">
+                                <a class="_tv-button wide ok" style="margin-right: 5px;">تایید</a>
+                                <a class="_tv-button wide cancel">لغو</a>
+                                </p>
+                                </form>
+                                </div>
+                                </div>
+                                </div>')
+                                sending = false;
+                                $('.postTitle' , iframe).focus();
+                                $('.chart-post-publish' , iframe).on('click', function(e){
+                                    e.preventDefault();
+                                    if(sending) return;
+                                    sending = true;
+
+                                    var title = $('.postTitle' , iframe).val();
+                                    $('.postTitle' , iframe).removeClass("required");
+
+                                    if(title.length< 1){
+                                        $('.postTitle' , iframe).addClass("required");
+                                        sending = false;
+                                    }
+                                    var message = $('.postMessage' , iframe).val();
+                                    $('.postMessage' , iframe).removeClass("required");
+                                    if(message.length < 1){
+                                        $('.postMessage' , iframe).addClass("required");
+                                        sending = false;
+                                    }
+
+                                    var direction = $('.postDirection' , iframe).val();
+// 								    $('.publish-direction-buttons' , iframe).removeClass("required");
+// 								    if(direction.length < 1){
+// 								    	$('.publish-direction-buttons' , iframe).addClass("required");
+// 								        sending = false;
+// 								    }
+
+                                    if(!sending)
+                                        return;
+
+                                    $('.loading' , iframe).html('در حال ارسال اطلاعات , لطفا منتظر بمانید ...');
+                                    var json = {
+                                        chart : chart,
+                                        images : image,
+                                        post : {
+                                            title:$('.postTitle' , iframe).val(),
+                                            message:$('.postMessage' , iframe).val(),
+                                            tags:$('.postTags' , iframe).val(),
+                                            direction:$('.postDirection' , iframe).val(),
+                                        }
+                                    };
+                                    $.ajax({
+                                        url: "/tv/chart/savePost",
+                                        type: 'post',
+                                        dataType: 'json',
+                                        data: json,
+                                        success: function(result){
+                                            $('.chart-post-form' , iframe).remove();
+                                            sending = false;
+                                        }
+                                    });
+                                });
+
+                                $(".publish-direction-buttons ._tv-button" , iframe).on("mousedown",
+                                        function() {
+                                            var a = $(this);
+                                            $(".publish-direction-buttons ._tv-button" , iframe).removeClass("active");
+                                            $('.publish-direction-buttons' , iframe).removeClass("required");
+                                            a.addClass("active");
+                                            $('input[name="direction"]' , iframe).val(a.data("val"))
+                                        }).each(function() {
+// 							            $(this).toggleClass("active", +$(this).data("val") === (+$('input[name="direction"]' , iframe).val() || 0))
+                                        });
+                                $('body' , iframe).on('click' , function(e) {
+                                    if (e.target.className.indexOf('publish-chart') == -1) {
+                                        $('.chart-post-form' , iframe).remove();
+                                    }
+                                });
+                                $('.chart-post-form' , iframe).on('click' , function(e) {
+                                    e.stopPropagation();
+                                });
+                                $('._tv-dialog-title-close, .chart-post-cancel' , iframe).on('click' , function(){
+                                    $('.chart-post-form' , iframe).remove();
+                                });
+
+
+                                $('.postMessage' , iframe).on('keyup input', function(e){
+                                    var messageLength = $('.postMessage' , iframe).val().length;
+                                    $('.counter-postMessage' , iframe).text(messageLength);
+                                });
+
+                            });
+
+                        }).append($('
+                        <span>انتشار</span>'));
+
+                var dropdown = "
+                        <select id='adjustmentType'>
+                <option value='0'>بدون تعدیل<\/option>
+                <option value='3'>افزایش سرمایه و سود نقدی<\/option>
+                <option value='1'>افزایش سرمایه<\/option>
+                <option value='2'>سود نقدی<\/option><\/select>
+                <i></i>";
+                widget.createButton()
+                        .addClass('adjustmentType')
+                        .on('change', function (e) {
+                            var adjustmentType = $('#adjustmentType', iframe).val();
+                            widget.symbolInterval(function(s) {
+                                chartSymbol = s.symbol.slice(0, -1) + '' + adjustmentType;
+                                widget.setSymbol(chartSymbol, s.interval);
+                                localStorage.setItem('chartSymbol' , chartSymbol);
+                                localStorage.setItem('adjustmentType' , adjustmentType);
+                            });
+                        })
+                        .append($(dropdown));
+
+                widget.createButton()
+                        .addClass('hide-marks')
+                        .on('click', function (e) {
+                            widget.activeChart()._chartWidget.actions().hideAllMarks.executeCallback();
+                            $(this).find('span').text($(this).find('span').text() == 'پنهان کردن علائم' ? 'نشان دادن علائم' : 'پنهان کردن علائم');
+                        }).append($('
+                        <span>پنهان کردن علائم</span>'));
+
+//    				    var openPriceType = "
+                <label>
+                <input type='checkbox' id='openPriceCheck' name='openPriceCheck' value='0'>open price type<\/label>";
+//     					widget.createButton()
+//     				    .addClass('openPriceType')
+//     					.on('click', function (e) {
+//     						var openPriceType = $('#openPriceCheck', iframe).val();//.is(':checked')
+//     						console.log(openPriceType);
+//     						widget.symbolInterval(function(s) {
+// //     							    chartSymbol = Math.floor(s.symbol / 10) + '' + adjustmentType;
+// //     						        widget.setSymbol(chartSymbol, s.interval); 
+// //     							    localStorage.setItem('chartSymbol' , chartSymbol);
+// //     						        localStorage.setItem('adjustmentType' , adjustmentType);
+//     						});
+//     					 })
+//     					.append($(openPriceType));
+            });
+
+        });
+
+        $(function(){
+            $('.tepix-container').remove();
+            $('.feedback').remove();
+            $('biz-notif').remove();
+            setTimeout(function(){ $('#ershangap').remove(); }, 0);
+
+            tvHeight = $(window).height() - 60;
+            $('#tv_chart_container').height(tvHeight);
+        })
+
+    </script>
+    <div class="row collapse tv-chart-container">
+        <div class="column" style="height:540px" id="tv_chart_container"></div>
+    </div>
+</div>
+<div id="container_footer" class="container-footer"></div>
+<div class="overlay">
+    <div class="content">
+    </div>
+</div>
+<div class="-msg-global">
+    <div class="-msg-indicator">
+        <i class="fa fa-e-check"></i>
+        <i class="fa fa-info"></i>
+        <i class="fa fa-question"></i>
+        <i class="fa fa-info"></i>
+    </div>
+    <div class="-msg-close -msg-global-part" onclick="$.close_msg();">
+        <i class="fa fa-cross"></i>
+    </div>
+    <div class="-msg-content -msg-global-part"></div>
+    <div class="-msg-controls -msg-global-part">
+        <div class="-msg-control -msg-confirm" onclick="$.msg_confirm();">بلی</div>
+        <div class="-msg-control -msg-cancel" onclick="$.msg_deny();">خیر</div>
+    </div>
+</div>
+<!--
+<div style="position:fixed; bottom: 32px; left: 32px; width: 128px; height: 48px; color: white; background: rgb(0, 65, 65); border-radius: 3px; box-shadow: 0 0 8px rgb(150, 150, 150);"><img style="margin-top:4px;" src="/images/test.jpg">
+</div>
+-->
+<div id="loginModal" data-reveal></div>
+<div id="mainSmallModal" class="reveal-modal small" data-reveal></div>
+<div id="mainMediumModal" class="reveal-modal medium" data-reveal></div>
+<div id="mainLargeStickyModal" class="reveal-modal large" data-reveal data-options="close_on_background_click:false;"></div>
+<div id="mainMediumFixedModal" class="reveal-modal small" data-reveal></div>
+<script>
+    $('body').addClass('tv-page');
+
+    $(document).ready(function(){
+
+        var _more = $('.header-holder .header-content .middle-bar .nav-pane .nav-link.more');
+
+        if (!(_more.html() && _more.html().trim() != '')) _more.remove();
+
+        // foundation javascript plugins initialization
+        $(document).foundation();
+    });
+
+
+</script>
+<!-- Start Alexa Certify Javascript -->
+<script type="text/javascript">
+    _atrk_opts = { atrk_acct:"FdORk1a4eFf2gI", domain:"nahayatnegar.com",dynamic: true};
+    (function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript>
+    <img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=FdORk1a4eFf2gI" style="display:none" height="1" width="1" alt="" />
+</noscript>
+<!-- End Alexa Certify Javascript -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-56428553-2"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-56428553-2');
+</script>
+<!-- Matomo -->
+<script type="text/javascript">
+    var _paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="//matomo.nahayatnegar.com/";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<!-- End Matomo Code -->
+</body>
+</html>

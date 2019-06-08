@@ -1,0 +1,25 @@
+{
+  "symbolsServerToken": "84a28d663944fbb85bb3ef0c0dc5db57",
+  "tvSymbol": {
+    "id": "IRO1IKCO00013",
+    "ticker": "IRO1IKCO00013",
+    "name": "\u062e\u0648\u062f\u0631\u06481",
+    "symbol": "\u062e\u0648\u062f\u0631\u06481",
+    "full_name": "\u0627\u06cc\u0631\u0627\u0646\u200c \u062e\u0648\u062f\u0631\u0648",
+    "description": "\u0627\u06cc\u0631\u0627\u0646\u200c \u062e\u0648\u062f\u0631\u0648",
+    "type": "stock",
+    "typestring": "\u0633\u0647\u0627\u0645",
+    "timezone": "Asia\/Tehran",
+    "session": "0900-1230:71234;7",
+    "pricescale": 100,
+    "minmov": 1,
+    "minmove2": 0,
+    "exchange": "\u0628\u0648\u0631\u0633",
+    "exchange_traded": "\u0628\u0648\u0631\u0633",
+    "exchange_listed": "\u0628\u0648\u0631\u0633",
+    "has_intraday": true,
+    "has_empty_bars": false,
+    "intraday_multipliers": ["1"],
+    "has_weekly_and_monthly": false
+  }
+}
